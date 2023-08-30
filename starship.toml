@@ -1,0 +1,93 @@
+# ~/.config/starship.toml
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Change the default prompt format
+format = """
+[   ](bg:#a3aed2 fg:#1d2230)\
+$username\
+[ ](bg:#769ff0 fg:#a3aed2)\
+$directory\
+[ ](fg:#769ff0 bg:#394260)\
+$git_branch\
+$git_status\
+[ ](fg:#394260 bg:#212736)\
+$c\
+[ ](fg:#212736 bg:#1d2230)\
+$time\
+[ ](fg:#1d2230)\
+\n$character"""
+
+# Change the default prompt characters
+[character]
+success_symbol = "[](#FFFFFF)"
+error_symbol = "[](#FFFFFF)"
+
+# Shows an icon that should be included by zshrc script based on the distribution or os
+[env_var.STARSHIP_DISTRO]
+format = '[$env_value](bold white)'  # removed space between distro and rest for pwsh
+variable = "STARSHIP_DISTRO"
+disabled = false
+
+# Shows the username
+[username]
+style_user = "fg:#1d2230 bold bg:#a3aed2"
+style_root = "fg:#1d2230 bold bg:#a3aed2"
+format = "[$user ]($style)"
+disabled = false
+show_always = true
+
+[directory]
+truncation_length = 20
+truncation_symbol = "…/"
+home_symbol = "󰋜"
+read_only_style = "197"
+read_only = "  "
+style = "fg:#e3e5e5 bg:#769ff0"
+format = "[ 󰍎 $path ]($style)"
+
+[directory.substitutions]
+"Documents" = " 󰈙 "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
+"/" = ""
+
+[git_branch]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+truncation_length = 15
+truncation_symbol = "…/"
+
+[git_status]
+style = "bg:#394260"
+format = '[($all_status$ahead_behind)](fg:#769ff0 bg:#394260)'
+conflicted = " "
+up_to_date = " "
+untracked = '[  untracked ](fg:red bg:#394260)'
+ahead = " ${count}"
+diverged = " 󰹺${ahead_count}${behind_count}"
+behind = " ${count}"
+stashed = " 󰏗"
+modified = '[ 󱇧](fg:red bg:#394260)'
+staged = '[ STAGED\($count\) ](fg:green bg:#394260)'
+renamed = " 󰖷"
+deleted = " "
+
+[c]
+style = 'bold bg:#212736'
+format = '[ via [$symbol($version(-$name) )](fg:#afd75f bg:#212736)]($style)'
+symbol = " "
+
+[python]
+symbol = " "
+python_binary = "python3"
+
+[rust]
+symbol = " "
+
+[time]
+disabled = false
+format = '[󱑎 [$time](yellow bold bg:#1d2230) ](bg:#1d2230)'

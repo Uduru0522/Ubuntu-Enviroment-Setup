@@ -1,0 +1,4 @@
+https://github.com/ryanoasis/nerd-fonts/blob/7deaff60d02ad26c38f4f8cc714300c08f598b1e/patched-fonts/DejaVuSansMono/Bold-Italic/DejaVuSansMNerdFontMono-BoldOblique.ttf
+https://github.com/ryanoasis/nerd-fonts/blob/7deaff60d02ad26c38f4f8cc714300c08f598b1e/patched-fonts/DejaVuSansMono/Regular/DejaVuSansMNerdFontMono-Regular.ttf
+https://github.com/ryanoasis/nerd-fonts/blob/7deaff60d02ad26c38f4f8cc714300c08f598b1e/patched-fonts/DejaVuSansMono/Italic/DejaVuSansMNerdFontMono-Oblique.ttf
+https://github.com/ryanoasis/nerd-fonts/blob/7deaff60d02ad26c38f4f8cc714300c08f598b1e/patched-fonts/DejaVuSansMono/Bold/DejaVuSansMNerdFontMono-Bold.ttf
