@@ -10,7 +10,7 @@ curl -sS https://starship.rs/install.sh | sh
 echo "eval \"$(starship init bash)\"" >> ~/.bashrc
 
 # Get Nerdfont & Normal font for DejaVu
-mkdir DejaVuNerdFontMono && cd DejaVuNerdFontMono
+mkdir -p DejaVuNerdFontMono && cd DejaVuNerdFontMono
 TTF_URLS=($(<$SCRIPT_DIR/fonts-url.txt))
 for url in "${TTF_URLS[@]}"
 do
