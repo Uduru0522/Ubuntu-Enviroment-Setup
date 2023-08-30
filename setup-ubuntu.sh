@@ -6,7 +6,8 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Install starship terminal
 apt-get install curl
-curl -sS https://starship.rs/install.sh | sh;
+curl -sS https://starship.rs/install.sh | sh
+echo "eval \"$(starship init bash)\"" >> ~/.bashrc
 
 # Get Nerdfont & Normal font for DejaVu
 mkdir DejaVuNerdFontMono && cd DejaVuNerdFontMono
