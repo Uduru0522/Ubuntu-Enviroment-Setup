@@ -20,7 +20,7 @@ done
 cd ..
 mv ./DejaVuNerdFontMono/ /usr/local/share/fonts
 
-FONT_NAME=fc-scan --format "%{fullname[$(( $(sed -E 's/^(.*)en.*/\1/;s/[^,]//g' <<<"$(fc-scan --format "%{fullnamelang}\n" /usr/share/fonts/truetype/abyssinica/AbyssinicaSIL-Regular.ttf)" | wc -c) -1 ))]}\n" /usr/local/share/fonts/
+FONT_NAME=$(fc-scan --format "%{fullname[$(( $(sed -E 's/^(.*)en.*/\1/;s/[^,]//g' <<<"$(fc-scan --format "%{fullnamelang}\n" /usr/share/fonts/truetype/abyssinica/AbyssinicaSIL-Regular.ttf)" | wc -c) -1 ))]}\n" /usr/local/share/fonts/)
 
 # Set font for Ubuntu console
 CONSOLE_PROFILE_UUID=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \') 
