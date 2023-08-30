@@ -25,3 +25,8 @@ FONT_NAME=fc-scan --format "%{fullname[$(( $(sed -E 's/^(.*)en.*/\1/;s/[^,]//g' 
 CONSOLE_PROFILE_UUID=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \') 
 gsetting set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${CONSOLE_PROFILE_UUID}/ use-system-font false
 gsetting set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${CONSOLE_PROFILE_UUID}/ font 'DejaVuSansM Nerd Font Mono 16'
+
+# Apply config file for starship
+cd $SCRIPT_DIR
+mkdir -p ~/.config
+mv ./starship.toml ~/.config/starship.toml
